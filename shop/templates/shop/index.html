@@ -1,0 +1,563 @@
+{% extends 'shop/basic.html' %}
+{% block title %}Home{% endblock %}
+
+{% block css %}
+
+@media only screen and (max-width: 600px) {
+  .sec1 {
+    display: none;
+  }
+  .sec2 .crd{
+    border-radius: 0px 50px;
+    margin: 2%;
+    background: #F7F7F7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    min-width: 40vw;
+    
+  }
+
+  .sec2 .container .row .col-3 .card-body .btn{
+    font-size: 3.75vw;
+  }
+
+}
+@media only screen and (max-width: 840px) and (min-height: 513px){
+  
+
+  .sec1 {
+    max-height: 70vh;
+  }
+  .sec1 .bnr{
+
+    width: 39.5vw;
+    height: auto;
+    padding: 120px 90px;  
+    font-size: 9.03vw;
+    line-height: 8.906vw;
+  
+  }
+
+.sec1 .banner{
+
+  position: absolute;
+  right: 0;    
+  top: 16.875vh;
+  width: 38vw;
+  height: auto;
+}
+
+.sec2 p.sec2
+{
+    font-size: 200%;
+}
+
+.sec2 .card-title{ 
+  font-size: 2.85vw;
+}
+  
+.sec2 .crd-text{
+  font-size: 2vw;
+}
+
+.sec4 .col-5 p{
+  font-size: 3vw;
+}
+
+.sec4 .col-5 h3{
+    font-size: 5.25vw;
+}
+
+.container .sec3 h3{
+  font-size: 4vh;
+}
+
+.container .sec3 .section3 p{
+  font-size: 1.5vh;
+}
+
+.container .sec3 .section3 i{
+  margin-left: 10px;
+}
+
+.container .sec3,.sec4{
+  margin-left: 12px
+}
+
+.container .sec6 .form-inline input[type=search] {
+  width: 62vw;
+  height: 4vh;
+  border: 2px solid #EC971F;
+  margin: 0;
+  
+}
+
+.container .sec6 form{
+  margin-top:40px;
+  margin-bottom: 10px;
+  margin-left:0px; margin-right:0px
+}
+
+.container .sec6 .form-inline i{
+  font-size: 3vh; 
+
+}
+
+.container .sec6 h3{
+  font-size: 4vh; 
+  margin: 0;
+}
+
+
+.container .sec5 h3{
+  
+    font-size: 4vh;
+
+}
+
+.container .sec5 .row img{
+
+  max-width: 12vh;
+  max-height: 12vh;
+  margin: 1.5vh;
+  
+}
+
+}
+
+.sec1
+{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg, #C4C4C8 0%, #E0E1E8 55.18%, #B1B2B8 100%);
+    
+}
+
+.bnr{
+
+  width: 32.5vw;
+  height: auto;
+  padding: 60px 40px;  
+  font-family: 'Electrolize';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 6.03vw;
+  line-height: 6.906vw;
+  
+  color: #000000;
+  
+}
+
+.banner
+{
+  position: absolute;
+  right: 0;    
+  top: 16.875vh;
+  width: 35.90625vw;
+  height: auto;
+}
+
+
+div.sec2
+{
+    
+    background-color: white;
+    margin-left: 2.34vw;
+
+}
+
+div.sec3{
+  margin-top: 100px;
+}
+
+div.section3{
+  margin-top: 50px;
+}
+
+div.sec4{
+  margin-top: 100px;
+  width: 100%;
+}
+
+.sec4 img{
+  margin: 0.46875vw;
+}
+
+.sec3 h3{
+   font-family: 'Encode Sans';
+   font-style: normal;
+   font-weight: 500;
+   font-size: 4vw;
+}
+
+.sec3 p{
+  font-family: 'Electrolize', sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  color: #818181;
+  margin-top:14px;
+}
+
+
+p.sec2
+{
+    font-family: 'Encode Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 300%;
+    line-height: 60px;
+    color: #000000;
+    margin-top:20px;
+
+}
+
+  .crd{
+    border-radius: 0px 50px;
+    margin: 2%;
+    background: #F7F7F7;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    min-width: 26vw;
+    
+  }
+  
+  
+  .card-img-top{
+      height: 100%
+      max-width: 15vw;
+      object-fit: cover;
+      margin-top: 15px;
+  }
+
+
+  .card-title{
+    font-family: 'Encode Sans', sans-serif;
+    font-weight: 500;
+    font-size: 1.875vw;
+}
+
+.crd-text{
+  font-size: 1.25vw;
+}
+
+.sec4 h3{
+  font-family: 'Encode Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 4.218vw;
+  color: #000000;
+
+}
+
+.sec4 p{
+  font-family: 'Encode Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 1.9vw;
+  color: #000000;
+  margin-top: 5.5vw;
+}
+
+div.sec5{
+  margin-top: 5vw;
+  width: 100%;
+}
+
+.sec5 h3{
+  font-family: 'Encode Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.5vw;
+    color: #000000;
+    margin-top:40px;
+    margin-bottom: 40px;
+
+}
+.sec5 img{
+
+  max-width: 15vw;
+  max-height: 15vw;
+  margin: 2vw;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 0;
+  
+}
+
+div.sec6{
+  
+  margin-top: 100px;
+  width: 100%;
+}
+
+.sec6 h3{
+  font-family: 'Encode Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 3.5vw;
+    color: #000000;  
+
+}
+
+.sec6 form{
+  margin: 10vh 7vw;
+}
+
+.sec6 button{
+  background-color:transparent;
+   border:none;
+}
+
+.sec6 input[type=search] {
+  width: 50vw;
+  height: 8vh;
+  border: 2px solid #EC971F;
+  
+}
+
+.icn{
+  font-size: 5vw;
+}
+
+.sec7 h3{
+  font-family: 'Encode Sans';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.5em;
+    color: #000000;  
+    margin: 5vw 0px;
+
+}
+
+.footer-bs {
+  background: linear-gradient(90deg, #C4C4C8 0%, #E0E1E8 55.18%, #B1B2B8 100%);
+  padding: 60px 40px;
+  color: black;
+  margin-top:60px;
+  border-bottom-right-radius: 6px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 6px;
+}
+
+ .footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { padding:10px 25px; }
+.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-color: transparent; }
+.footer-bs .footer-brand h2 { margin:0px 0px 10px; }
+.footer-bs .footer-brand p { font-size:12px; color: black; }
+
+.footer-bs .footer-brand{
+  font-family: 'Electrolize';
+        font-style: normal;
+        font-weight: 400;
+}
+
+.footer-bs .footer-nav ul.pages { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.pages li { padding:5px 0px;}
+.footer-bs .footer-nav ul.pages a { color:black; font-weight:bold; text-transform:uppercase; }
+.footer-bs .footer-nav ul.pages a:hover { color:#E0A800; text-decoration:none; } 
+.footer-bs .footer-nav h4 {
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: 3px;
+margin-bottom:10px;
+}
+
+.footer-bs .footer-nav ul.list { list-style:none; padding:0px; }
+.footer-bs .footer-nav ul.list li { padding:5px 0px;}
+.footer-bs .footer-nav ul.list a { color:black; }
+.footer-bs .footer-nav ul.list a:hover { color:#E0A800; text-decoration:none; }
+
+.footer-bs .footer-social ul { list-style:none; padding:0px; }
+.footer-bs .footer-social h4 {
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: 3px;
+}
+.footer-bs .footer-social li { padding:5px 4px;}
+.footer-bs .footer-social a { color:black;}
+.footer-bs .footer-social a:hover { color:#E0A800; text-decoration:none; }
+
+.footer-bs .footer-ns h4 {
+font-size: 11px;
+text-transform: uppercase;
+letter-spacing: 3px;
+margin-bottom:10px;
+}
+.footer-bs .footer-ns p { font-size:12px; color:rgba(255,255,255,0.70); }
+
+@media (min-width: 768px) {
+.footer-bs .footer-nav, .footer-bs .footer-social, .footer-bs .footer-ns { border-left:solid 1px rgba(255,255,255,0.10); }
+}
+
+.map-responsive{
+
+  overflow:hidden;
+  padding-bottom:70%;
+  position:relative;
+  height: 0;
+
+
+}
+
+.map-responsive iframe{
+  left:0;
+  top:0;
+  height:100%;
+  width:100%;
+  position:absolute;
+
+}
+{% endblock %}
+
+{%load static%}
+
+
+{% block body %}
+{% load static %}
+{% load humanize %}
+
+
+<div class="sec1">
+   <p class="bnr">Only the best for you.</p>
+   <img class="banner" src="{% static 'shop/images/bannwer.png' %}">
+</div>
+
+
+<div class="sec2">
+    <p class="sec2">Deal of the day</p>
+    {% for i in range%}
+    <div class="container">
+      <div class="row">
+        {%endfor%}
+        {% for j in product%}
+        <div class="card crd col-3" >
+          <img class="card-img-top" src='{{j.image.url}}' alt="Card image cap">
+          <div class="card-body">
+              <h5 class="card-title crd-title">{{j.product_name|truncatewords:5}}</h5>
+              <p class="card-text crd-text">{{j.desc|truncatechars:99}}</p>
+              <p class="card-text crd-text"><b>J$ {{j.price|floatformat:2|intcomma }}</b></p>
+              <a href="/productview/{{j.model}}"><button class="btn btn-warning">Learn More</button></a>
+          </div>
+        </div>        
+        {%endfor%}    
+      </div>
+      </div>
+    </div>
+ </div>
+</div>
+
+<div class="container">
+<div class="sec3">
+  <h3>Our Promises</h3>
+
+  <div class="row section3">
+
+    <div class="col-3">
+      <i class="fa-solid icn fa-credit-card  fa-flip" style="--fa-animation-duration: 4s; margin-left: 5px; font-size: 6.835vw;"></i>
+      <p>Best Price</p>
+    </div>
+
+    <div class="col-3">
+      <i class="fa-solid icn fa-certificate fa-spin" style="--fa-animation-duration: 8s; margin-left: 4.2vw; font-size: 6.835vw;"></i>
+      <p>Certified Products</p>
+    </div>
+
+    <div class="col-3">
+      <i class="fa-solid icn fa-tags  fa-shake" style="--fa-animation-duration: 4s; margin-left: 4.2vw; font-size: 6.835vw;"></i>
+      <p>Great Discounts</p>
+    </div>
+
+    <div class="col-3">
+      <i class="fa-solid icn fa-truck-arrow-right fa-bounce" style="--fa-animation-duration: 4s; margin-left: 3vw; font-size: 6.835vw;"></i>
+      <p>Fast Delivery</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="sec4 row">
+  <div class="col-7">
+    <div class="row">
+      <img style="width: 21.25vw; height: 26.25vw;" src="{% static 'shop/images/fn1.png' %}">
+      <img style="width: 21.25vw; height: 21.25vw; margin-top: 5vw;" src="{% static 'shop/images/fn2.png' %}">
+      
+    </div>
+
+    <div class="row">
+      <img style="width: 15.76vw; height: 21.25vw;" src="{% static 'shop/images/fn3.png' %}">
+      <img style="width: 26.25vw; height: 26.25vw;" src="{% static 'shop/images/fn4.png' %}">
+    </div>
+
+  </div>
+  <div class="col-5">
+    <h3>Explore our furniture store.</h3>
+    <p>You need it? We got it. We make finding your next home easy, comfortable and simple. From our happiness guarantee to the quality of our products. We provide you flexibility that you most desire.</p>
+    <a class="btn btn-warning " href="/category/furniture" role="button" style="margin-top: 1vw;">Discover</a>
+  </div>
+</div>
+
+
+<div class="sec5">
+  <h3>Shop By brand</h3>
+  <div class="row">
+    <a href="/category/samsung"><img src="{% static 'shop/images/sms.png' %}" alt="..." class="img-thumbnail col-2"></a>
+    <a href="/category/5star"><img src="{% static 'shop/images/5star.png' %}" alt="..." class="img-thumbnail col-2"></a>
+    <a href="/category/LG"><img src="{% static 'shop/images/lg.png' %}" alt="..." class="img-thumbnail col-2"></a>
+    <a href="/category/whirlpool"><img src="{% static 'shop/images/whirlpool.png' %}" alt="..." class="img-thumbnail col-2"></a>
+    <a href="/category/hamilton-beach"><img src="{% static 'shop/images/hb.png' %}" alt="..." class="img-thumbnail col-2"></a>
+  </div>
+</div>
+
+<div class="sec6">
+    <h3>Looking for something else?</h3>
+    <form class="form-inline" action="/search/" method="POST"> 
+      {% csrf_token %}
+      <input class="form-control mr-sm-2" type="search" name="srch" placeholder="Search" aria-label="Search">
+      <button  type="submit"><i class="fa-solid fa-magnifying-glass" style="color:black; cursor: pointer;"></i></button>
+    </form>
+
+</div>
+
+</div>
+
+<footer class="footer-bs">
+  <div class="row">
+    <div class="col-md-3 footer-brand animated fadeInLeft">
+        <h2>appliance<br>&nbsp &nbsp &nbspCITY</h2>
+          <p>It has always been our promise to provide what's best for you. Come join us as we endeavour on this mission of supplying the best of quality and price all within your reach.</p>
+          <p>© 2022 JAMAICA, All rights reserved</p>
+      </div>
+    <div class="col-md-4 footer-nav animated fadeInUp">
+        <h4>Shop —</h4>
+        <div class="col-md-12">
+              <ul class="pages">
+                  <li><a href="/category/small appliance">Small appliances</a></li>
+                  <li><a href="/category/kitchen appliance">Kitchen appliances</a></li>
+                  <li><a href="/category/mattress">Mattress</a></li>
+                  <li><a href="/category/stove">Stoves</a></li>
+                  <li><a href="/category/home appliance">Home appliances</a></li>
+                  <li><a href="/category/laptop">Laptops</a></li>
+                  <li><a href="/category/air conditioner">AC</a></li>
+                  <li><a href="/category/bedhead">Bedheads</a></li>
+                                    
+              </ul>
+          </div>
+      </div>
+    <div class="col-md-2 footer-social animated fadeInDown">
+        <h4>Follow Us</h4>
+        <ul>
+            <li><a href="/demo">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Terms&Conditions</a></li>
+            <li>Find us here</li>
+            <div class="map-responsive">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3783.858331927743!2d-77.65666688593215!3d18.490075174933878!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eda330395263b1d%3A0xc3395ce1fa555784!2sHouse%20of%20Electronics!5e0!3m2!1sen!2sin!4v1654866930329!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </ul>
+      </div>
+
+  </div>
+</footer>
+<section style="text-align:center; margin:0.5px auto;"><p>Designed by Yashna Nathwani</a></p></section>
+
+</div>
+
+{%endblock%}
+

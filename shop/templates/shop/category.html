@@ -1,0 +1,112 @@
+{% extends 'shop/basic.html' %}
+{% block css %}
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    .container .card{
+        height: 20vh;
+        width: auto;
+    }
+    .container .card .card-body .card-title{
+        
+        font-size: 16px;
+    }
+    .container .card .card-body .card-text, .container .card .card-body p{
+        
+        font-size: 13px;
+    }
+    .container .card .card-body .img{
+        width: auto; 
+        height: auto;
+        max-width: 20vw;
+        max-height: 15vh;
+        object-fit: cover;
+        margin-right: 15px;
+     }
+     .container .card .card-body .btn{
+        font-size: 15px;
+     }
+}
+
+@media only screen and (max-width: 376px) {
+
+    .container .card .card-body .btn{
+        font-size: 12px;
+        bottom: 8px;
+     }
+    
+     .container .card .card-body .price{
+        position: absolute;
+        bottom: 4px;
+        left: 16px;
+        margin-bottom: 0px
+    }
+
+}
+
+.container{
+    margin-top:20px;
+}
+
+.card{
+     margin-bottom: 20px;
+     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+     border-radius: 12px;
+ }
+
+ .img{
+    width: auto; 
+    height: auto;
+    max-width: 10vw;
+    object-fit: cover;
+    margin-right: 15px;
+ }
+.card-title{
+    font-family: 'Encode Sans', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+}
+
+.cat-name{
+    font-family: 'Encode Sans', sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: black;
+    margin-bottom: 20px;
+    
+}
+
+.card-body .btn{
+    position: absolute;
+    bottom: 15px;
+    right: 16px;
+}
+
+
+
+
+{% endblock %}
+
+{% block body %}
+{% load humanize %}
+
+<div class="container">
+<h3 class="cat-name">Search results for {{cat}}...</h3>
+{% for j in product%}
+<div class="card">
+    <div class="card-body">
+      <img src='{{j.image.url}}' class="rounded img float-left">
+      <h5 class="card-title">{{j.product_name|truncatechars:30}}..</h5>
+      <p class="card-text">{{j.desc|truncatechars:35}}</p>
+      <p class="price"><b>J$ {{j.price|floatformat:2|intcomma}}</b></p>
+      <a href="/productview/{{j.model}}" role="button" class="btn btn-sm btn-warning">View</a>
+    </div>
+  </div>
+{% endfor %}
+</div>
+
+
+{% endblock %}

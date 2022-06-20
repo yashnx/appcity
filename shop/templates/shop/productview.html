@@ -1,0 +1,66 @@
+{% extends 'shop/basic.html' %}
+{% block title %}{{prods.product_name}}{% endblock %}
+{% block css%}
+
+@media only screen and (max-width: 600px) {
+  .container .row .col-md-6 .image{
+    width: auto; 
+    height: auto;
+    max-width: 80vw;
+    max-height: 70vw;
+    object-fit: cover;
+    margin: 0px;
+  }
+
+  .container .row .col-md-6{
+    margin-bottom: 20px;
+  }
+
+}
+
+.image{
+  width: auto; 
+  height: auto;
+  max-width: 40vw;
+  max-height: 30vw;
+  object-fit: cover;
+}
+.container{
+  margin: 70px 0px;
+}
+.container h1,h2,h3,h4,h5,h6{
+  font-family: 'Encode Sans', sans-serif;
+  font-weight: 600;
+}
+
+.btn{
+  margin-top: 10px;
+}
+
+{% endblock %}
+
+{% block body%}
+<div class="alert alert-success" role="alert">
+  Added to cart! Go check out
+</div>
+{% load humanize %}
+<div class="container">
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <img class="image " src="{{prods.image.url}}"  alt=""><br>
+      <button class="btn btn-warning cart kart" id="{{prods.model}}">Add to Cart</button>
+    </div>
+    <div class="col-md-4 right">
+      <h1>{{prods.product_name}}</h1>
+      <p>Model: {{prods.model}}</p>
+      <p>Status: {{prods.status}}</p>
+      <h6>Price</h6>
+      <h4>J$ {{prods.price|floatformat:2|intcomma}}</h4><br>
+      <p>{{prods.desc|truncatewords:200}}</p>
+    </div>
+  </div> 
+</div>
+
+{% load static%}
+
+{%endblock%}
